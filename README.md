@@ -1,0 +1,2 @@
+# ErrorHandler
+PHP ErrorHandler
