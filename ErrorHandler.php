@@ -3,7 +3,7 @@
 ** BRQ
 **
 ** @author     Binkhamis(BRQ) <bkhamis0@gmail.com>
-** @copyright  BRQnet © 2019
+** @copyright  BRQnet © 2020
 ** @license    MIT
 ** @link       http://brqnet.com
 ** @link       https://github.com/brqt/
@@ -405,7 +405,7 @@ class ErrorHandler
       </table>
     </div>
   </div>
-  <div id="rights">Developed by: <a target="_blank" href="http://brqnet.com">BRQnet © 2019</a></div>
+  <div id="rights">Developed by: <a target="_blank" href="http://brqnet.com">BRQnet © 2020</a></div>
 </body>
 </html>';
 
