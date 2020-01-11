@@ -13,13 +13,12 @@
 
 class ErrorHandler
 {
-  private $errors = E_ALL & ~E_NOTICE;
+  private const ERRORS = E_ALL & ~E_NOTICE;
 
-  public function __construct($errors = E_ALL & ~E_NOTICE)
+  public function __construct()
   {
-    $this->$errors = $errors;
     \register_shutdown_function([$this, 'checkForFatal']);
-    \set_error_handler([$this, 'logError'], $this->errors);
+    \set_error_handler([$this, 'logError'], self::ERRORS);
     \set_exception_handler([$this, 'logException']);
   }
 
