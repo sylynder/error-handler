@@ -27,5 +27,5 @@ error interface that helps you debug your project.
     require_once "BrqErrorHandler/ErrorHandler.php";
 
     // init
-    new BrqErrorHandler;
+    new ErrorHandler;
     ```
