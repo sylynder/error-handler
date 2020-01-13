@@ -17,7 +17,7 @@ error interface that helps you debug your project.
 
 1. Download Or Clone this repo to your project folder.
 
-1. Register the pretty handler in your code:
+1. Register the handler in your code:
 
     ```php
     // hide php errors
@@ -27,5 +27,5 @@ error interface that helps you debug your project.
     require_once "BrqErrorHandler/ErrorHandler.php";
 
     // init
-    new BrqErrorHandler;
+    new ErrorHandler;
     ```
