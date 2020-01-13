@@ -67,7 +67,7 @@ class ErrorHandler
       $line_start = (int) $e->getLine() - 10;
       if($line_start < 0) $line_start = 0;
       $source = file($e->getFile());
-      $source = array_slice($source, $line_start-1, 20);
+      $source = array_slice($source, $line_start > 1 ? $line_start-1 : $line_start, 20);
 
       foreach ($source as $k => $line) {
         $line_number = $line_start + $k;
