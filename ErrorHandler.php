@@ -405,7 +405,7 @@ class ErrorHandler
       </table>
     </div>
   </div>
-  <div id="rights">Developed by: <a target="_blank" href="http://brqnet.com">BRQnet © 2020</a></div>
+  <div id="rights">Developed by: <a target="_blank" href="http://brqnet.com">BRQnet © <script>document.write((new Date).getFullYear())</script></a></div>
 </body>
 </html>';
 
