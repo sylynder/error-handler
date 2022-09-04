@@ -1,31 +1,46 @@
-# BrqErrorHandler
-PHP ErrorHandler
+# Webby Beautiful Error Handler
 
-[![author](https://img.shields.io/badge/author-brqnet.com-green)](http://brqnet.com/)
-
-
+PHP Error Handler
 -----
 
-![BrqErrorHandler screenshot](https://i.imgur.com/jcNI2YP.png)
+<img src="errorHandler.png" alt="Error Handler Image">
 
+**ErrorHandler** is an error handler class improved to work with Webby PHP Framework. 
 
-**BrqErrorHandler** is an error handler class for PHP. 
-provides a pretty
-error interface that helps you debug your project.
+It provides a pretty error interface that helps you debug your project.
 
-## Installing
+## Usage
 
-1. Download Or Clone this repo to your project folder.
+Currently it will not work with any PHP framework except Webby. If you want to use the original project, go to this url:
 
-1. Register the handler in your code:
+BrqErrorHandler [https://github.com/brqt/](https://github.com/brqt/)
 
-    ```php
-    // hide php errors
-    ini_set('display_errors', 0);
+### How it is used in Webby
 
-    // include BrqErrorHandler
-    require_once "BrqErrorHandler/ErrorHandler.php";
+It is called inside CodeIgniter.php found at 
+/vendor/sylynder/framework/CodeIgniter.php 
 
-    // init
-    new ErrorHandler;
-    ```
+```php
+/*
+ * ------------------------------------------------------
+ *  Define a custom error handler so we can log PHP errors
+ * ------------------------------------------------------
+ */
+set_error_handler('_error_handler');
+set_exception_handler('_exception_handler');
+register_shutdown_function('_shutdown_handler');
+
+if (config_item('beautiful_error_handler')) {
+	
+	// Require Beautiful ErrorHandler
+	require_once "ErrorHandler.php";
+
+	// Use Beautiful Error Handler
+	new ErrorHandler;
+}
+
+```
+
+## License
+
+MIT
